@@ -1,16 +1,17 @@
-import React from 'react'
-import ContentRow from './ContentRow'
+import React,{useState, useEffect} from 'react'
+import { Switch, Route } from 'react-router-dom'
+import MyList from './MyList'
 import VideoPlayer from './VideoPlayer'
+import moviesService from '../service/movie'
 
-const Main = ({movies}) => {
+const Main = () => {
   return (
-    <div className="main">
-      <div className="main-content">
-        <div className="gallery-content">
-          <ContentRow movies={movies}/>
-        </div>
-      </div>
-    </div>
+    <main>
+      <Switch>
+        <Route exact path='/' component={MyList}/>
+        <Route path='/watch' component={VideoPlayer}/>
+      </Switch>
+    </main>
   )
 }
 

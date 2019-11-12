@@ -30,7 +30,7 @@ app.get('/api/movies/:id', (req, res) => {
     }
     const id = Number(req.params.id)
     link = result[id-1].fileLocation
-    res.sendFile(__dirname + '/client/public/watch.html')
+    res.send(link)
   })
 })
 

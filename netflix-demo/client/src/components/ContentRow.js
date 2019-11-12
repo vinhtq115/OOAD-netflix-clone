@@ -1,6 +1,10 @@
 import React from 'react'
 import Item from './Item'
+import JawboneContent from './Jawbone/JawboneContent'
+import Collapsible from './Collapsible'
+
 const ContentRow = ({movies}) => {
+
 
   const moviesRows = () => movies.map(movie =>
     <

@@ -7,7 +7,7 @@ const getAll = () => {
 }
 
 const getMovie = id => {
-  return axios.get(baseURL + '/' + id).then(response => response.data)
+  return axios.get(`${baseURL}/${id}`).then(response => response.data)
 }
 
 export default {
