@@ -3,6 +3,7 @@ body, html, #root {
   height: 100%;
   background: #141414;
   font-size: 1vw;
+  overflow-x: hidden;
 }
 
 
@@ -170,7 +171,6 @@ main{
   height: 100%;
   width: 100%;
   position: absolute;
-  overflow-x: hidden;
 }
 
 .footer {
