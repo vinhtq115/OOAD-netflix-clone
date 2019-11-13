@@ -4,8 +4,8 @@ import JawboneTrailer from './JawboneTrailer'
 
 const JawboneContent =() => {
   return (
-    <div class="jawbone-content">
-      <div class="jawbone-background">
+    <div class="jawbone-overlay">
+      <div class="jawbone-content">
         <JawboneTrailer/>
         <JawbonePlot/>
       </div>

@@ -8,6 +8,7 @@ const pool = require('./model/moviedb')
 const app = express();
 const port = process.env.PORT || 3001;
 let link = ""
+let count = 0
 
 app.use(cors())
 app.use(bodyParser.json());
@@ -36,7 +37,8 @@ app.get('/api/movies/:id', (req, res) => {
 
 app.get('/movie', function(req, res) {
   const path = link
-  console.log(link)
+  count += 1
+  console.log(String(count) + ' ' + link)
   const stat = fs.statSync(path)
   const fileSize = stat.size
   const range = req.headers.range
@@ -54,8 +56,7 @@ app.get('/movie', function(req, res) {
       'Content-Range': `bytes ${start}-${end}/${fileSize}`,
       'Accept-Ranges': 'bytes',
       'Content-Length': chunksize,
-      'Content-Type': 'video/mp4',
-      'Cache-Control': 'no-cache'
+      'Content-Type': 'video/mp4'
     }
 
     res.writeHead(206, head)

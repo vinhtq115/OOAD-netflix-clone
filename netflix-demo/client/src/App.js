@@ -10,7 +10,6 @@ const App = () => {
     <div className="background">
       <Header/>
       <Main/>
-      <Footer/>
     </div>
   )
 }

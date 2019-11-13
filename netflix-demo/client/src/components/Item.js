@@ -1,23 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import JawboneContent from './Jawbone/JawboneContent'
-import Collapsible from 'react-collapsible'
+import InfoCollapsible from './InfoCollapsible'
 import VideoPlayer from './VideoPlayer'
 import { Link } from 'react-router-dom'
 
 import moviesService from '../service/movie'
 
 const Item = ({id, name, plot, poster}) => {
+  let count = 1;
 
   const onClick = () => {
-    console.log(
-      'clicking'
-    )
     changeToApi(id)
   }
 
   const changeToApi = id => {
-    console.log('getting')
+    console.log(String(count+=1) + ' getting')
     moviesService.getMovie(id)
 
   }
@@ -29,9 +26,7 @@ const Item = ({id, name, plot, poster}) => {
           <img src={poster} alt={name}/>
         </Link>
       </div>
-      <Collapsible>
-        <JawboneContent/>
-      </Collapsible>
+      <InfoCollapsible name={name} plot={plot}/>
     </div>
   )
 }
