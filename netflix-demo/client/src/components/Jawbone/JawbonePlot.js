@@ -10,10 +10,10 @@ const JawbonePlot = () => {
           <div class="plot">
         </div>
         <div class="play-button">
-          <span class="play" onClick="" style="background: red;">
+          <span class="play" background="red">
             Watch
           </span>
-          <span class="mylist" onClick="" style="background: white">
+          <span class="mylist" background="white">
             My List
           </span>
         </div>

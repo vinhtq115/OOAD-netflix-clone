@@ -5,8 +5,8 @@ const VideoPlayer = () => {
   return (
     <div class="video-player">
       <GoBackButton/>
-      <video id="videoPlayer" controls autoplay width="100%" position="fixed">
-        <source src="http://localhost:3001/movie" type='video/mp4'/>
+      <video id="videoPlayer" controls autoPlay width="100%" position="fixed">
+        <source src="http://localhost:3001/movie?t=1923801924" type='video/mp4'/>
       </video>
     </div>
   )

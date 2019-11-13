@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import JawboneContent from './Jawbone/JawboneContent'
-import Collapsible from './Collapsible'
+import Collapsible from 'react-collapsible'
 import VideoPlayer from './VideoPlayer'
 import { Link } from 'react-router-dom'
 
@@ -29,7 +29,9 @@ const Item = ({id, name, plot, poster}) => {
           <img src={poster} alt={name}/>
         </Link>
       </div>
-      <Collapsible name={name} plot={plot}/>
+      <Collapsible>
+        <JawboneContent/>
+      </Collapsible>
     </div>
   )
 }

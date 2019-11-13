@@ -1,10 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
+import JawboneContent from './Jawbone/JawboneContent'
 
+const Collapsible = ({name, plot}) => {
 
-const Collapsible = ({child}) => {
+  const [collapse, setCollapse] = useState(false)
+
   return (
     <div class="collapsible">
-      {child}
+      <JawboneContent name={name} plot={plot}/>
     </div>
   )
 }

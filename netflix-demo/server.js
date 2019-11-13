@@ -36,6 +36,7 @@ app.get('/api/movies/:id', (req, res) => {
 
 app.get('/movie', function(req, res) {
   const path = link
+  console.log(link)
   const stat = fs.statSync(path)
   const fileSize = stat.size
   const range = req.headers.range
@@ -54,6 +55,7 @@ app.get('/movie', function(req, res) {
       'Accept-Ranges': 'bytes',
       'Content-Length': chunksize,
       'Content-Type': 'video/mp4',
+      'Cache-Control': 'no-cache'
     }
 
     res.writeHead(206, head)
@@ -62,6 +64,7 @@ app.get('/movie', function(req, res) {
     const head = {
       'Content-Length': fileSize,
       'Content-Type': 'video/mp4',
+      'Cache-Control': 'no-cache'
     }
     res.writeHead(200, head)
     fs.createReadStream(path).pipe(res)
