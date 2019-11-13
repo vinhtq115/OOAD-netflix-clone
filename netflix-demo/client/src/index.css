@@ -3,6 +3,7 @@ body, html, #root {
   height: 100%;
   background: #141414;
   font-size: 1vw;
+  overflow: hidden;
 }
 
 
@@ -123,10 +124,6 @@ main{
   z-index: 6;
 }
 
-.go-back-button {
-  z-index: 7;
-}
-
 .gallery-content {
   display: flex;
   max-width: 100%;
@@ -183,10 +180,17 @@ main{
 }
 
 .go-back-button {
-  background: red;
-  position:absolute;
-  margin-top: 50px;
-  margin-left: 0px;
-  width: 20px;
-  height: 20px;
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 32px;
+  height: 32px;
+  z-index: 7;
+}
+
+.go-back-button img {
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 32px;
+  height: 32px;
+  z-index: 7;
 }
