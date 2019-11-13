@@ -179,7 +179,8 @@ main{
 }
 
 .go-back-button {
-  margin-top: 5px;
+  position: absolute;
+  margin-top: 50px;
   margin-left: 5px;
   width: 32px;
   height: 32px;
