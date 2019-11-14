@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import InfoCollapsible from './InfoCollapsible'
+import ModalLauncher from './Jawbone/ModalLauncher'
 import VideoPlayer from './VideoPlayer'
 import { Link } from 'react-router-dom'
 
@@ -26,7 +26,6 @@ const Item = ({id, name, plot, poster}) => {
           <img src={poster} alt={name}/>
         </Link>
       </div>
-      <InfoCollapsible name={name} plot={plot}/>
     </div>
   )
 }
